@@ -41,10 +41,18 @@ document.querySelector("#mute").addEventListener("click", function() {
 	if (video.muted == false){
 		video.muted = true;
 		document.querySelector("#mute").innerHTML = "Unmute";
+		document.querySelector("#volume").innerHTML = 0+"%";
 	}
 	else{
 		video.muted = false;
 		document.querySelector("#mute").innerHTML = "Mute";
+		document.querySelector("#volume").innerHTML = 100+"%";
 	}
 });
+
+document.querySelector("#slider").addEventListener("click", function(){
+	var slide = document.getElementById("slider").value;
+	video.volume = slide/100;
+	document.querySelector("#volume").innerHTML = (video.volume*100)+"%";
+})
 
