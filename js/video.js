@@ -54,5 +54,14 @@ document.querySelector("#slider").addEventListener("click", function(){
 	var slide = document.getElementById("slider").value;
 	video.volume = slide/100;
 	document.querySelector("#volume").innerHTML = (video.volume*100)+"%";
+});
+
+document.querySelector("#vintage").addEventListener("click", function(){
+	video.classList.add("oldSchool");
+});
+
+document.querySelector("#orig").addEventListener("click", function(){
+	video.classList.remove("oldSchool");
 })
+
 
